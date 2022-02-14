@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.8.55/css/materialdesignicons.min.css"> -->
+    
+
+    
+    <title>MICTS-Tool-Center</title>
+    <style>
+      .asset-modal .label {
+          font-size: .75rem;
+          font-weight: 300;
+      }
+
+      a {
+        color: #00d1b2;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      a.box:hover,
+      a.box:focus {
+        box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0 0 1px #00d1b2;
+      }
+
+      a.box:active {
+        box-shadow: inset 0 1px 2px rgba(10, 10, 10, 0.2), 0 0 0 1px #00d1b2;
+      }
+      .has-text-primary {
+          color: #00d1b2!important;
+      }
+
+      .has-background-primary {
+        background-color: #00d1b2 !important;
+      }
+      .button.is-primary {
+        background-color: #00d1b2!important;
+        border-color: transparent;
+        color: #fff;
+      }
+
+      .button:focus,
+      .button.is-focused {
+        border-color: #00d1b2;
+        color: #363636;
+      }
+
+      .switch.is-outlined input[type=checkbox]:checked + .check:before {
+        background: #00d1b2;
+      }
+
+      .switch.is-outlined input[type=checkbox]:checked + .check.is-primary {
+        background: transparent;
+        border-color: #00d1b2;
+      }
+
+      .switch.is-outlined input[type=checkbox]:checked + .check {
+        border-color: #00d1b2;
+      }
+
+      .switch.is-outlined input[type=checkbox]:checked + .check.is-primary:before {
+        background: #00d1b2;
+      }
+      
+      .b-steps .steps .step-items .step-item.is-active .step-marker {
+        background-color: white;
+        border-color: #00d1b2;
+        color: #00d1b2;
+      }
+
+      .b-slider.is-primary .b-slider-fill {
+      background: #00d1b2 !important;
+      }
+
+      .b-sidebar .sidebar-content.is-primary {
+          background-color: #00d1b2;
+      }
+
+      .b-radio.radio:hover input[type=radio]:not(:disabled) + .check.is-primary {
+        border-color: #00d1b2;
+      }
+
+      .b-radio.radio:hover input[type=radio]:not(:disabled) + .check {
+        border-color: #00d1b2;
+      }
+
+      .b-radio.radio input[type=radio]:checked + .check.is-primary {
+        border-color: #00d1b2;
+      }
+
+      .b-radio.radio input[type=radio]:checked + .check {
+        border-color: #00d1b2;
+      }
+
+      .b-radio.radio input[type=radio] + .check.is-primary:before {
+        background: #00d1b2;
+      }
+
+      .b-radio.radio input[type=radio] + .check:before {
+        content: "";
+        display: -webkit-box;
+        display: flex;
+        position: absolute;
+        left: 50%;
+        margin-left: calc(-1.25em/2);
+        bottom: 50%;
+        margin-bottom: calc(-1.25em/2);
+        width: 1.25em;
+        height: 1.25em;
+        -webkit-transition: -webkit-transform 150ms ease-out;
+        transition: -webkit-transform 150ms ease-out;
+        transition: transform 150ms ease-out;
+        transition: transform 150ms ease-out, -webkit-transform 150ms ease-out;
+        border-radius: 50%;
+        -webkit-transform: scale(0);
+                transform: scale(0);
+        background-color: #00d1b2;
+      }
+
+      .datepicker .datepicker-table .datepicker-body.has-events .datepicker-cell.has-event .events .event.is-primary {
+        background-color: #00d1b2;
+      }
+      
+      .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-selected.is-last-selected {
+        background-color: #00d1b2;
+        color: #fff;
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+      }
+
+      .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-selected {
+        background-color: #00d1b2;
+        color: #fff;
+      }
+
+      .datepicker .datepicker-table .datepicker-body .datepicker-cell.is-selected.is-first-selected {
+        background-color: #00d1b2;
+        color: #fff;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+
+      .b-clockpicker-body .b-clockpicker-btn:hover,
+      .b-clockpicker-body .b-clockpicker-btn.active {
+        background-color: #00d1b2;
+        color: white;
+      }
+
+      .b-clockpicker.is-primary .b-clockpicker-face:after {
+        background-color: #00d1b2;
+      }
+
+      .b-clockpicker.is-primary .b-clockpicker-face-hand {
+        background-color: #00d1b2;
+        border-color: #00d1b2;
+      }
+
+      .b-clockpicker.is-primary .b-clockpicker-face-number.active {
+        background-color: #00d1b2;
+        color: #fff;
+      }
+
+      .hero.is-primary .tabs.is-boxed li.is-active a,
+      .hero.is-primary .tabs.is-boxed li.is-active a:hover,
+      .hero.is-primary .tabs.is-toggle li.is-active a,
+      .hero.is-primary .tabs.is-toggle li.is-active a:hover {
+        background-color: #fff;
+        border-color: #fff;
+        color: #00d1b2;
+      }
+
+      .hero.is-primary {
+        background-color: #00d1b2;
+        color: #fff;
+      }
+
+      .tabs.is-toggle li.is-active a {
+        background-color: #00d1b2;
+        border-color: #00d1b2;
+        color: #fff;
+        z-index: 1;
+      }
+
+      .tabs li.is-active a {
+        border-bottom-color: #00d1b2;
+        color: #00d1b2;
+      }
+
+      .panel-block.is-active .panel-icon {
+        color: #00d1b2;
+      }
+
+      .panel-block.is-active {
+        border-left-color: #00d1b2;
+        color: #363636;
+      }
+
+      .panel-list a:hover {
+        color: #00d1b2;
+      }
+
+      .navbar-dropdown a.navbar-item.is-active {
+        background-color: whitesmoke;
+        color: #00d1b2;
+      }
+
+      .navbar.is-transparent .navbar-dropdown a.navbar-item.is-active {
+        background-color: whitesmoke;
+        color: #00d1b2;
+      }
+
+      .input:active, .input:focus, .is-active.input, .is-active.textarea, .is-focused.input, .is-focused.textarea, .select select.is-active, .select select.is-focused, .select select:active, .select select:focus, .taginput .is-active.taginput-container.is-focusable, .taginput .is-focused.taginput-container.is-focusable, .taginput .taginput-container.is-focusable:active, .taginput .taginput-container.is-focusable:focus, .textarea:active, .textarea:focus {
+        border-color: #00d1b2;
+        box-shadow: 0 0 0 0.125em rgb(0 209 178 / 25%);
+      }
+
+      .input:focus {
+          border-color: #00d1b2;
+          box-shadow: 0 0 0 0.125em rgb(0 209 178 / 25%);
+      }
+
+      /* asset table tab */
+      .tc-tabs .tabs.is-boxed li.is-active a {
+        border-color: #003944;
+        background-color: #003944 !important;
+        color: white;
+      }
+
+      /* asset table tab */
+      .tc-tabs .tabs.is-boxed a {
+        border: 1px solid #dbdbdb;
+        border-radius: 0 0 10px 10px;
+        margin-top: -1px;
+      }
+      
+      .tc-tabs .tabs.is-boxed ul {
+       
+        border-bottom-width: 0;
+      }
+
+     
+
+
+
+      @font-face {
+        font-family: 'MyFont';
+        src: url("../assets/fonts/MyFont.woff2") format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'MyFont';
+        src: url("../assets/fonts/MyFont.woff2") format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: 'hk_groteskregular';
+        src: url('./assets/fonts/hk_grotesk/hkgrotesk-regular-webfont.woff2') format('woff2'),
+            url('./assets/fonts/hk_grotesk/hkgrotesk-regular-webfont.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+      }
+      
+      .bg-login{
+          background:linear-gradient(rgb(241, 241, 241),
+        rgb(233, 236, 241), rgb(215, 223, 242));
+          background-repeat: no-repeat;
+          background-position: center center;
+          background-size: cover;
+          margin:0px;
+      }
+
+      .bg-login #app {
+        display: table;
+        width: 100%;
+        height: 100vh;
+      }
+      
+
+
+
+      
+
+      body::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #FFF;
+        background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(#002830), to(#002830), color-stop(0.6, #badc58));
+      }
+
+
+      body::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #F5F5F5;
+        border-radius: 10px;
+      }
+
+      body::-webkit-scrollbar {
+        width: 10px;
+        background-color: #F5F5F5;
+      }
+    </style>
+  </head>
+  <body class="bg-login">
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>

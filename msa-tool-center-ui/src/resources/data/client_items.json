@@ -1,0 +1,52 @@
+{
+    "data": [
+        {
+            "name": "Clients",
+            "nav": "clients",
+            "description": "Manage Clients. For EDC Advisory and Asset Inventory.",
+            "permission": "read-item-clients",
+            "feather_icon": "user-plus",
+            "status": 1
+        },
+        {
+            "name": "Recipients",
+            "nav": "recipients",
+            "description": "Manage Recipients. For EDC Advisory and Asset Inventory.",
+            "permission": "read-item-recipients",
+            "feather_icon": "user-plus",
+            "status": 1
+        },
+        {
+            "name": "Locations",
+            "nav": "locations",
+            "description": "Manage Locations. For EDC Advisory and Asset Inventory.",
+            "permission": "read-item-locations",
+            "feather_icon": "layers",
+            "status": 1
+        },
+        {
+            "name": "Sites",
+            "nav": "sites",
+            "description": "Manage Sites. For EDC Advisory and Asset Inventory.",
+            "permission": "read-item-sites",
+            "feather_icon": "layers",
+            "status": 1
+        },
+        {
+            "name": "Areas",
+            "nav": "areas",
+            "description": "Manage Areas. For EDC Advisory and Asset Inventory.",
+            "permission": "read-item-areas",
+            "feather_icon": "layers",
+            "status": 1
+        },
+        {
+            "name": "Advisory Category",
+            "nav": "advisory_category",
+            "description": "For EDC Advisory. View, Add, Edit and Delete Advisory Category.",
+            "permission": "read-item-advisory-category",
+            "feather_icon": "layers",
+            "status": 0
+        }
+    ]
+}
